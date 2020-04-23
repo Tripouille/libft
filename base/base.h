@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   base.h                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: jgambard <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/03/18 18:47:54 by jgambard         ###   ########.fr       */
+/*   Updated: 2020/04/23 18:46:12 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,5 +35,6 @@ void				free_str_array(char **array);
 int					str_array_size(char **array);
 char				*ft_strjoin(int nb, ...);
 char				*ft_itoa_copy(char *buffer, long nb);
+int					ft_strccmp(const char *s1, const char *s2, char c);
 
 #endif
