@@ -1,33 +1,20 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_str.c                                        :+:      :+:    :+:   */
+/*   ft_strccpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/15 13:02:29 by jgambard          #+#    #+#             */
-/*   Updated: 2020/04/24 12:33:56 by aalleman         ###   ########lyon.fr   */
+/*   Created: 2020/04/24 15:48:18 by aalleman          #+#    #+#             */
+/*   Updated: 2020/04/24 15:55:53 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "base.h"
 
-void		ft_strncpy(char *dest, const char *src, size_t size)
+void		ft_strccpy(char *dest, char *src, char stop)
 {
-	size_t		i;
-
-	i = 0;
-	while (i < size && src[i])
-	{
-		dest[i] = src[i];
-		i++;
-	}
-}
-
-int			ft_strncmp(const char *s1, const char *s2, size_t n)
-{
-	if ((*s1 || *s2) && (*s1 == *s2 && n && n - 1))
-		return (ft_strncmp(++s1, ++s2, --n));
-	else
-		return (n ? (unsigned char)*s1 - (unsigned char)*s2 : 0);
+	while (*src && *src != stop)
+		*dest++ = *src++;
+	*dest = 0;
 }

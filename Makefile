@@ -5,7 +5,8 @@ INCLUDE_BASE		= base/base.h
 SRCS_BASE			= $(addprefix base/, cinstr.c free_str_array.c ft_atoi.c \
 					ft_calloc.c ft_isdigit.c ft_itoa.c ft_itoa_copy.c ft_split.c ft_strcmp.c \
 					ft_strdup.c ft_strjoin.c ft_strlcat.c ft_strlcpy.c ft_strlen.c ft_strncmp.c \
-					ft_strndup.c skip_spaces.c square.c str_array_size.c ft_strccmp.c)
+					ft_strndup.c skip_spaces.c square.c str_array_size.c ft_strccmp.c \
+					ft_isalpha.c ft_isalphanum.c ft_strccpy.c)
 OBJS_BASE			= ${SRCS_BASE:.c=.o}
 
 INCLUDE_GNL			= gnl/get_next_line.h

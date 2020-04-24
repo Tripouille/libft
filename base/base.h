@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/04/23 18:46:12 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/24 15:51:08 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,8 @@ int					str_array_size(char **array);
 char				*ft_strjoin(int nb, ...);
 char				*ft_itoa_copy(char *buffer, long nb);
 int					ft_strccmp(const char *s1, const char *s2, char c);
+int					ft_isalpha(char c);
+int					ft_isalphanum(char c);
+void				ft_strccpy(char *dest, char *src, char stop);
 
 #endif
