@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/04/24 15:51:08 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 19:18:33 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,12 @@
 # include <stdlib.h>
 # include <stdarg.h>
 # include <stdio.h>
+
+typedef struct		s_list
+{
+	void			*content;
+	void			*next;
+}					t_list;
 
 size_t				ft_strlen(const char *s);
 int					ft_isdigit(int c);
@@ -39,5 +45,13 @@ int					ft_strccmp(const char *s1, const char *s2, char c);
 int					ft_isalpha(char c);
 int					ft_isalphanum(char c);
 void				ft_strccpy(char *dest, char *src, char stop);
+
+t_list				*ft_lst_new(void *content);
+t_list				*ft_lst_addback(t_list **head, t_list *new_node);
+t_list				*ft_lst_addfront(t_list **head, t_list *new_node);
+t_list				*ft_lst_last(t_list *node);
+void				ft_lst_purge(t_list **head, void (*del)(void *));
+void				ft_lst_iter(t_list *node, void (*f)(void *));
+int					ft_lst_size(t_list *node);
 
 #endif
