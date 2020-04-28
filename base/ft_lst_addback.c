@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 18:59:44 by aalleman          #+#    #+#             */
-/*   Updated: 2020/04/26 19:21:11 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 20:10:19 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 ** Return the added node (so 0 if malloc previously failed).
 */
 
-t_list		*ft_lst_addback(t_list **head, t_list *new_node)
+t_lst		*ft_lst_addback(t_lst **head, t_lst *new_node)
 {
 	if (!*head)
 		*head = new_node;

@@ -6,21 +6,22 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 19:09:58 by aalleman          #+#    #+#             */
-/*   Updated: 2020/04/26 19:21:12 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 20:10:36 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "base.h"
 
-void	ft_lst_purge(t_list **head, void (*del)(void *))
+void	ft_lst_purge(t_lst **head, void (*del)(void *))
 {
-	t_list	*node;
-	t_list	*tmp;
+	t_lst	*node;
+	t_lst	*tmp;
 
 	node = *head;
 	while (node)
 	{
-		(*del)(node->content);
+		if (del)
+			(*del)(node->content);
 		tmp = node->next;
 		free(node);
 		node = tmp;

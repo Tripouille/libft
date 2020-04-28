@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/04/26 19:18:33 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 20:11:07 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@
 # include <stdarg.h>
 # include <stdio.h>
 
-typedef struct		s_list
+typedef struct		s_lst
 {
 	void			*content;
 	void			*next;
-}					t_list;
+}					t_lst;
 
 size_t				ft_strlen(const char *s);
 int					ft_isdigit(int c);
@@ -46,12 +46,12 @@ int					ft_isalpha(char c);
 int					ft_isalphanum(char c);
 void				ft_strccpy(char *dest, char *src, char stop);
 
-t_list				*ft_lst_new(void *content);
-t_list				*ft_lst_addback(t_list **head, t_list *new_node);
-t_list				*ft_lst_addfront(t_list **head, t_list *new_node);
-t_list				*ft_lst_last(t_list *node);
-void				ft_lst_purge(t_list **head, void (*del)(void *));
-void				ft_lst_iter(t_list *node, void (*f)(void *));
-int					ft_lst_size(t_list *node);
+t_lst				*ft_lst_new(void *content);
+t_lst				*ft_lst_addback(t_lst **head, t_lst *new_node);
+t_lst				*ft_lst_addfront(t_lst **head, t_lst *new_node);
+t_lst				*ft_lst_last(t_lst *node);
+void				ft_lst_purge(t_lst **head, void (*del)(void *));
+void				ft_lst_iter(t_lst *node, void (*f)(void *));
+int					ft_lst_size(t_lst *node);
 
 #endif

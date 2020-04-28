@@ -6,13 +6,13 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 19:14:51 by aalleman          #+#    #+#             */
-/*   Updated: 2020/04/26 19:21:05 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 20:10:52 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "base.h"
 
-int		ft_lst_size(t_list *node)
+int		ft_lst_size(t_lst *node)
 {
 	int		count;
 

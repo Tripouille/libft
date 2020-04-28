@@ -6,15 +6,15 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/04/26 18:55:23 by aalleman          #+#    #+#             */
-/*   Updated: 2020/04/26 19:21:09 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/04/26 20:10:30 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "base.h"
 
-t_list	*ft_lst_new(void *content)
+t_lst	*ft_lst_new(void *content)
 {
-	t_list	*node;
+	t_lst	*node;
 
 	if (!(node = malloc(sizeof(*node))))
 		return (0);
