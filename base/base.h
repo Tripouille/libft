@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/04/26 20:11:07 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/05/04 20:26:54 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -45,6 +45,7 @@ int					ft_strccmp(const char *s1, const char *s2, char c);
 int					ft_isalpha(char c);
 int					ft_isalphanum(char c);
 void				ft_strccpy(char *dest, char *src, char stop);
+int					ft_isspace(char c);
 
 t_lst				*ft_lst_new(void *content);
 t_lst				*ft_lst_addback(t_lst **head, t_lst *new_node);
