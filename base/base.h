@@ -6,7 +6,7 @@
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2020/02/15 13:00:44 by jgambard          #+#    #+#             */
-/*   Updated: 2020/05/04 20:26:54 by aalleman         ###   ########lyon.fr   */
+/*   Updated: 2020/05/17 08:58:41 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,14 +20,14 @@
 typedef struct		s_lst
 {
 	void			*content;
-	void			*next;
+	struct s_lst	*next;
 }					t_lst;
 
 size_t				ft_strlen(const char *s);
 int					ft_isdigit(int c);
 int					ft_strncmp(const char *s1, const char *s2, size_t n);
 int					ft_strcmp(const char *s1, const char *s2);
-size_t				ft_strlcpy(char *dst, const char *rsc, size_t size);
+size_t				ft_strlcpy(char *dst, const char *src, size_t size);
 size_t				ft_strlcat(char *dst, const char *src, size_t size);
 int					ft_atoi(const char *str);
 void				*ft_calloc(size_t count, size_t size);
@@ -54,5 +54,7 @@ t_lst				*ft_lst_last(t_lst *node);
 void				ft_lst_purge(t_lst **head, void (*del)(void *));
 void				ft_lst_iter(t_lst *node, void (*f)(void *));
 int					ft_lst_size(t_lst *node);
+void				ft_lst_remove(t_lst **head, t_lst *needle,
+											void (*del)(void*));
 
 #endif

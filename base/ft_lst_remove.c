@@ -1,25 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils_str.c                                        :+:      :+:    :+:   */
+/*   ft_lst_remove.c                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: aalleman <aalleman@student.42lyon.fr>      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2020/02/15 13:02:29 by jgambard          #+#    #+#             */
-/*   Updated: 2020/05/17 07:13:47 by aalleman         ###   ########lyon.fr   */
+/*   Created: 2020/05/17 03:01:41 by aalleman          #+#    #+#             */
+/*   Updated: 2020/05/17 07:22:28 by aalleman         ###   ########lyon.fr   */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "ft_printf.h"
+#include "base.h"
 
-void		ft_strncpy(char *dest, const char *src, size_t size)
+void	ft_lst_remove(t_lst **head, t_lst *needle, void (*del)(void*))
 {
-	size_t		i;
-
-	i = 0;
-	while (i < size && src[i])
+	if (*head == needle)
 	{
-		dest[i] = src[i];
-		i++;
+		*head = (*head)->next;
+		if (del)
+			del(needle->content);
+		free(needle);
 	}
+	else if ((*head)->next)
+		ft_lst_remove(&((*head)->next), needle, del);
 }

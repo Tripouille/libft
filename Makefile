@@ -8,7 +8,7 @@ SRCS_BASE			= $(addprefix base/, cinstr.c free_str_array.c ft_atoi.c \
 					ft_strndup.c skip_spaces.c square.c str_array_size.c ft_strccmp.c \
 					ft_isalpha.c ft_isalphanum.c ft_strccpy.c ft_isspace.c)
 SRCS_BASE			+= $(addprefix base/, ft_lst_addback.c ft_lst_addfront.c ft_lst_iter.c \
-					ft_lst_last.c ft_lst_new.c ft_lst_purge.c ft_lst_size.c)
+					ft_lst_last.c ft_lst_new.c ft_lst_purge.c ft_lst_size.c ft_lst_remove.c)
 OBJS_BASE			= ${SRCS_BASE:.c=.o}
 
 INCLUDE_GNL			= gnl/get_next_line.h
